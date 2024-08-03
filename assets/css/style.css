@@ -98,7 +98,6 @@ header .headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   white-space: nowrap;
 }
 
