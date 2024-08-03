@@ -64,10 +64,15 @@ class Swapper {
     this.slides.addEventListener("mousemove", this.handleDragMove.bind(this));
     this.slides.addEventListener("mouseup", this.handleDragEnd.bind(this));
     this.slides.addEventListener("mouseleave", this.handleDragEnd.bind(this));
-    this.slides.addEventListener("touchstart", this.handleDragStart.bind(this));
-    this.slides.addEventListener("touchmove", this.handleDragMove.bind(this));
+    this.slides.addEventListener(
+      "touchstart",
+      this.handleDragStart.bind(this),
+      { passive: true }
+    );
+    this.slides.addEventListener("touchmove", this.handleDragMove.bind(this), {
+      passive: true,
+    });
     this.slides.addEventListener("touchend", this.handleDragEnd.bind(this));
-
     window.addEventListener(
       "resize",
       debounce(this.handleResize.bind(this), 300)
