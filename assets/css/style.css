@@ -628,6 +628,7 @@ footer #datenschutzerklaerung.open {
   box-sizing: border-box;
   text-align: center;
   width: 100%;
+  user-select: none;
 }
 .slider .prev,
 .slider .next {
